@@ -76,13 +76,25 @@ module.exports = class MRT {
                 for (var i = 0; i < stations.length; i = i + 2) {
                   startStation.push(stations[i]);
                 }
-                // console.log("startStation: " + startStation.length);
+                console.log("startStation: " + startStation.length);
 
                 //到達站
                 for (var j = 1; j < stations.length; j = j + 2) {
                   endStation.push(stations[j]);
                 }
                 // console.log("endStation: " + endStation.length);
+
+                // //因應前端需求，額外整理成json格式
+                // var json1 = [];
+                // for (var i = 0; i < endStation.length; i++) {
+                //   // console.log(endStation[i].substring(endStation[i].indexOf(" "), 100));
+                //   var test = endStation[i].substring(endStation[i].indexOf(" "), 100);
+                //   test = test.replace(" ", "");
+                //   json1.push(test);
+                // }
+                // console.log(JSON.stringify({
+                //   json1
+                // }));
 
                 var oriMoney = [];
                 var off8Money = [];
